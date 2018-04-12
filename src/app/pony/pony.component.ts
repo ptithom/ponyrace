@@ -21,8 +21,9 @@ export class PonyComponent implements OnInit {
     return 'assets/images/pony-' + this.ponyModel.color.toLowerCase() + '.gif';
   }
 
-  ponyClicked() {
+  clicked() {
     this.ponyClicked.emit(this.ponyModel);
+    // this.ponyModel.color = 'green';
   }
 
 }
