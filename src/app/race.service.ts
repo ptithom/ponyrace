@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { RaceModel } from './models/race.model';
-import {PonyModel} from './models/pony.model';
 import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
 import {HttpClient} from '@angular/common/http';
 
 @Injectable()
@@ -12,7 +10,7 @@ export class RaceService {
 
   }
 
-  list(): Observable<Array<RaceModel<PonyModel>>> {
+    list(): Observable<Array<RaceModel>> {
 
       const params = { status: 'PENDING' };
       return this.http.get(`http://ponyracer.ninja-squad.com/api/races`,{params});

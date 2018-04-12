@@ -9,6 +9,7 @@ import { RacesComponent } from './races/races.component';
 import { RaceService } from './race.service';
 import { RaceComponent } from './race/race.component';
 import { PonyComponent } from './pony/pony.component';
+import { FromNowPipe } from './from-now.pipe';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { PonyComponent } from './pony/pony.component';
     RacesComponent,
     RaceComponent,
     PonyComponent,
+    FromNowPipe,
   ],
   imports: [
     BrowserModule, HttpClientModule
