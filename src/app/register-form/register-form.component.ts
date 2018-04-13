@@ -1,10 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
-
-class User {
-  username: string;
-  password: string;
-}
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'pr-register-form',
@@ -12,15 +7,28 @@ class User {
   styleUrls: ['./register-form.component.css']
 })
 export class RegisterFormComponent implements OnInit {
+  usernameCtrl: FormControl;
+  passwordCtrl: FormControl;
+  userForm: FormGroup;
 
-  user = new User();
-
-  register() {
-    console.log(this.user);
+  constructor(fb: FormBuilder) {
+    this.usernameCtrl = fb.control('');
+    this.passwordCtrl = fb.control('');
+    this.userForm = fb.group({
+      username: this.usernameCtrl,
+      password: this.passwordCtrl
+    });
   }
 
-  constructor() { }
+  reset() {
+    this.usernameCtrl.setValue('');
+    this.passwordCtrl.setValue('');
+  }
 
+
+  register() {
+    console.log(this.userForm.value);
+  }
   ngOnInit() {
   }
 
