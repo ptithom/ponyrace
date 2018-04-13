@@ -13,6 +13,7 @@ import { RaceComponent } from './race/race.component';
 import { PonyComponent } from './pony/pony.component';
 import { FromNowPipe } from './from-now.pipe';
 import { HomeComponent } from './home/home.component';
+import { RegisterFormComponent } from './register-form/register-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HomeComponent } from './home/home.component';
     RaceComponent,
     PonyComponent,
     FromNowPipe,
-    HomeComponent
+    HomeComponent,
+    RegisterFormComponent
   ],
   imports: [
     BrowserModule,
